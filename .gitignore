@@ -1,0 +1,17 @@
+# Drupal specific
+/sites/*/files
+/sites/*/private
+/sites/default/settings.php
+/sites/default/services.yml
+
+# Ignore paths that contain user-generated content
+/sites/*/files
+/sites/*/private
+
+# Core and vendor (if using Composer)
+/core
+/vendor
+
+# Other
+.DS_Store
+*. log
