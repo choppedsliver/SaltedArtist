@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4b37bcd3d1e92581e9868ad5215f6303",
+    "content-hash": "2099395b1725cf909b0a3d32a0932ee2",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1999,6 +1999,43 @@
                 }
             ],
             "time": "2025-08-23T21:21:41+00:00"
+        },
+        {
+            "name": "jacerider/valet",
+            "version": "2.0.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jacerider/valet.git",
+                "reference": "97746bf29845628a550e6fe3e797aa0bd4d105e6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jacerider/valet/zipball/97746bf29845628a550e6fe3e797aa0bd4d105e6",
+                "reference": "97746bf29845628a550e6fe3e797aa0bd4d105e6",
+                "shasum": ""
+            },
+            "require": {
+                "drupal/core": "^9.3 || ^10 || ^11"
+            },
+            "type": "drupal-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Cyle Carlson (JaceRider)",
+                    "email": "jacerider@gmail.com",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "An Alfred-inspired navigation system for Drupal.",
+            "homepage": "https://github.com/jacerider/valet",
+            "support": {
+                "issues": "https://github.com/jacerider/valet/issues",
+                "source": "https://github.com/jacerider/valet"
+            },
+            "time": "2025-07-08T16:49:32+00:00"
         },
         {
             "name": "laravel/prompts",
