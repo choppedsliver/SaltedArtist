@@ -1,0 +1,22 @@
+uuid: 2a498d41-1c1a-416d-98b3-067e997ae927
+langcode: en
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - saltedartist
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: saltedartist_help
+theme: saltedartist
+region: header
+weight: -6
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

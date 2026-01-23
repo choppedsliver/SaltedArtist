@@ -16,6 +16,16 @@ module:
   dblog: 0
   dynamic_page_cache: 0
   editor: 0
+  exo: 0
+  exo_config_file: 0
+  exo_fixed: 0
+  exo_icon: 0
+  exo_imagine: 0
+  exo_layout_builder: 0
+  exo_link: 0
+  exo_modal: 0
+  exo_site_settings: 0
+  exo_toolbar: 0
   field: 0
   field_ui: 0
   file: 0
@@ -39,6 +49,7 @@ module:
   shortcut: 0
   system: 0
   taxonomy: 0
+  telephone: 0
   text: 0
   toolbar: 0
   update: 0
@@ -50,4 +61,5 @@ module:
 theme:
   olivero: 0
   claro: 0
+  saltedartist: 0
 profile: standard
