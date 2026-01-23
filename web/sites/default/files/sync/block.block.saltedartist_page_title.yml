@@ -1,6 +1,6 @@
 uuid: ae4dfeda-f154-4573-80cb-cd6f857b2ed6
 langcode: en
-status: true
+status: false
 dependencies:
   theme:
     - saltedartist
@@ -9,7 +9,7 @@ _core:
 id: saltedartist_page_title
 theme: saltedartist
 region: content
-weight: -6
+weight: -4
 provider: null
 plugin: page_title_block
 settings:

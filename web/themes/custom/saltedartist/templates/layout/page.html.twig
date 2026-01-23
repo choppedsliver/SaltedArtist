@@ -1,28 +1,24 @@
-<!DOCTYPE html>
-<html{{ html_attributes }}>
-  <head>
-    <head-placeholder token="{{ placeholder_token }}">
-    <title>{{ head_title|safe_join(' | ') }}</title>
-    <css-placeholder token="{{ placeholder_token }}">
-    <js-placeholder token="{{ placeholder_token }}">
-  </head>
-  <body{{ attributes.addClass('min-h-screen', 'flex', 'flex-col', 'bg-white') }}>
-    {# Skip to main content link for accessibility #}
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-blue-600 text-white p-4 z-50">
-      Skip to main content
-    </a>
+{#
+/**
+ * @file
+ * Theme implementation to display a single page.
+ */
+#}
 
-    {{ page_top }}
+<div class="min-h-screen flex flex-col bg-white">
+  {# Skip to main content link for accessibility #}
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-blue-600 text-white p-4 z-50">
+    Skip to main content
+  </a>
 
-    {# Header #}
-    <header >
+  {{ page_top }}
+
+  {# Header #}
+  {% if page.header %}
+    <header class="bg-white border-b">
       <div class="container mx-auto px-4 py-6">
         <div class="flex justify-between items-center">
-          <h1 class="text-3xl font-bold">
-            <a href="{{ path('<front>') }}" class="hover:text-blue-200 transition">
-              {{ site_name }}
-            </a>
-          </h1>
+          {{ page.header }}
           
           {% if page.primary_menu %}
             <nav class="hidden md:block">
@@ -32,39 +28,43 @@
         </div>
       </div>
     </header>
+  {% endif %}
 
-    {# Main Content #}
-    <main id="main-content" class="flex-grow py-8">
-      <div class="container mx-auto px-4">
+  {# Main Content #}
+  <main id="main-content" class="flex-grow py-8">
+    <div class="container mx-auto px-4">
 
-        {% if page.breadcrumb %}
-          <div class="mb-4">
-            {{ page.breadcrumb }}
-          </div>
-        {% endif %}
-
-        <div class="bg-white rounded-lg shadow-md p-8">
-          {{ page.content }}
+      {% if page.breadcrumb %}
+        <div class="mb-4">
+          {{ page.breadcrumb }}
         </div>
-      </div>
-    </main>
+      {% endif %}
 
-    {# Footer #}
-    <footer class="bg-gray-600 text-base mt-auto">
+      {% if page.highlighted %}
+        <div class="mb-4">
+          {{ page.highlighted }}
+        </div>
+      {% endif %}
+
+      <div class="bg-white rounded-lg shadow-md p-8">
+        {{ page.content }}
+      </div>
+    </div>
+  </main>
+
+  {# Footer #}
+  {% if page.footer %}
+    <footer class="bg-gray-600 text-white mt-auto">
       <div class="container mx-auto px-4 py-6">
-        {% if page.footer %}
-          <div class="mb-4">
-            {{ page.footer }}
-          </div>
-        {% endif %}
+        <div class="mb-4">
+          {{ page.footer }}
+        </div>
         <p class="text-center text-gray-400">
-          © {{ "now"|date("Y") }} {{ site_name }}
+          © {{ "now"|date("Y") }}
         </p>
       </div>
     </footer>
+  {% endif %}
 
-    {{ page_bottom }}
-
-    <js-bottom-placeholder token="{{ placeholder_token }}">
-  </body>
-</html>
+  {{ page_bottom }}
+</div>

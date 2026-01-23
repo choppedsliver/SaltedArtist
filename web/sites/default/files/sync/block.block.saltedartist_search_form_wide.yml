@@ -11,7 +11,7 @@ _core:
 id: saltedartist_search_form_wide
 theme: saltedartist
 region: header
-weight: -3
+weight: -4
 provider: null
 plugin: search_form_block
 settings:

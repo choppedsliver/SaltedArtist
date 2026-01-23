@@ -1,6 +1,6 @@
 uuid: 0f8afd66-1779-4927-8d9c-8fcbfad4886b
 langcode: en
-status: true
+status: false
 dependencies:
   theme:
     - saltedartist
@@ -9,7 +9,7 @@ _core:
 id: saltedartist_primary_local_tasks
 theme: saltedartist
 region: header
-weight: 1
+weight: -2
 provider: null
 plugin: local_tasks_block
 settings:

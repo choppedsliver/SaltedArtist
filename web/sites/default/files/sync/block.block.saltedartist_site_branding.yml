@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - node
     - system
   theme:
     - saltedartist
@@ -11,7 +12,7 @@ _core:
 id: saltedartist_site_branding
 theme: saltedartist
 region: header
-weight: -6
+weight: -7
 provider: null
 plugin: system_branding_block
 settings:
@@ -19,7 +20,14 @@ settings:
   label: 'Site branding'
   label_display: '0'
   provider: system
-  use_site_logo: true
+  use_site_logo: false
   use_site_name: true
   use_site_slogan: true
-visibility: {  }
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      page: page

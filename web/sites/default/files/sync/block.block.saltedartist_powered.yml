@@ -11,7 +11,7 @@ _core:
 id: saltedartist_powered
 theme: saltedartist
 region: header
-weight: -4
+weight: -5
 provider: null
 plugin: system_powered_by_block
 settings:
