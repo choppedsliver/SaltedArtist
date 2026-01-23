@@ -4,12 +4,20 @@ description: 'Custom theme for Salted Artist'
 core_version_requirement: ^10 || ^11
 base theme: olivero
 
+libraries:
+  - saltedartist/global-styling
+
+libraries-override:
+  olivero/base:
+    css:
+      theme:
+        css/base/base.css: false
+
 regions:
   header: Header
   primary_menu: 'Primary menu'
   page_top: 'Page top'
   page_bottom: 'Page bottom'
-  highlighted: Highlighted
   breadcrumb: Breadcrumb
   content: Content
   footer: Footer
