@@ -11,7 +11,7 @@ _core:
 id: saltedartist_help
 theme: saltedartist
 region: header
-weight: -6
+weight: -5
 provider: null
 plugin: help_block
 settings:
