@@ -16,6 +16,7 @@ module:
   dblog: 0
   dynamic_page_cache: 0
   editor: 0
+  entity_reference_revisions: 0
   exo: 0
   exo_config_file: 0
   exo_fixed: 0
@@ -43,6 +44,7 @@ module:
   node: 0
   options: 0
   page_cache: 0
+  paragraphs: 0
   path: 0
   path_alias: 0
   search: 0
