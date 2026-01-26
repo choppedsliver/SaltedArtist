@@ -12,6 +12,9 @@ module.exports = {
         'yellow': '#D6A047',
         'black': '#000000',
       },
+      fontFamily: {
+        'georgia': ['Georgia', 'serif'],
+      },
     },
   },
   plugins: [],
