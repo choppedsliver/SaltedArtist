@@ -1,0 +1,21 @@
+uuid: 134e4b70-a4da-4f66-ae74-9568f7017ad5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_callout.field_title
+    - paragraphs.paragraphs_type.image_callout
+id: paragraph.image_callout.default
+targetEntityType: paragraph
+bundle: image_callout
+mode: default
+content:
+  field_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }
