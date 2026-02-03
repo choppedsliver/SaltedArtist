@@ -4,16 +4,41 @@
 /sites/default/settings.php
 /sites/default/services.yml
 
+# Ignore configuration files that may contain sensitive information.
+/web/sites/*/settings*.php
+/web/sites/*/services*.yml
+
 # Ignore paths that contain user-generated content
 /sites/*/files
 /sites/*/private
+/web/sites/*/files
+/web/sites/*/private
+
+# Ignore database backups
+*.sql
+*.sql.gz
 
 # Core and vendor (if using Composer)
 /core
 /vendor
+/vendor/
 
 # Other
 .DS_Store
 *. log
 /.editorconfig
 /.gitattributes
+
+
+# But keep settings example
+!/web/sites/*/settings.example.php
+
+
+# Ignore test fixtures and temp files
+*.swp
+*.swo
+*~
+test-path.php
+/web/core/modules/*/tests/fixtures/
+/web/core/tests/fixtures/
+/web/core/modules/update/tests/*.tar.gz

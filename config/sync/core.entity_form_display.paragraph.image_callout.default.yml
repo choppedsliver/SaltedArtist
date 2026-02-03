@@ -1,0 +1,23 @@
+uuid: d0ba3987-6386-4c4c-afc2-3755044daf10
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_callout.field_title
+    - paragraphs.paragraphs_type.image_callout
+id: paragraph.image_callout.default
+targetEntityType: paragraph
+bundle: image_callout
+mode: default
+content:
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

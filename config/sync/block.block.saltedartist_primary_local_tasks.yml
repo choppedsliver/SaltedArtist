@@ -1,0 +1,22 @@
+uuid: 0f8afd66-1779-4927-8d9c-8fcbfad4886b
+langcode: en
+status: false
+dependencies:
+  theme:
+    - saltedartist
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: saltedartist_primary_local_tasks
+theme: saltedartist
+region: header
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

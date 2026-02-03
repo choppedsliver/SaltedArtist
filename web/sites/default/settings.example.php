@@ -92,6 +92,19 @@
  */
 $databases = [];
 
+$databases['default']['default'] = [
+  'database' => 'YOUR_DATABASE_NAME',
+  'username' => 'YOUR_DATABASE_USER',
+  'password' => 'YOUR_DATABASE_PASSWORD',
+  'host' => 'localhost',
+  'port' => '3306',
+  'driver' => 'mysql',
+  'prefix' => '',
+  'collation' => 'utf8mb4_general_ci',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+];
+
+
 /**
  * Customizing database settings.
  *
@@ -288,7 +301,7 @@ $databases = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = '';
+$settings['hash_salt'] = 'GENERATE_A_RANDOM_HASH_SALT_HERE';
 
 /**
  * Deployment identifier.
@@ -878,3 +891,9 @@ if (getenv('IS_DDEV_PROJECT') == 'true' && file_exists(__DIR__ . '/settings.ddev
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
+
+
+/**
+ * Location of the site configuration files.
+ */
+$settings['config_sync_directory'] = '../config/sync';

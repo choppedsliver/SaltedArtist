@@ -1,0 +1,22 @@
+uuid: c2372989-e4cb-4f87-8c8a-d2621392bf93
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - saltedartist
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: saltedartist_content
+theme: saltedartist
+region: content
+weight: -3
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }
