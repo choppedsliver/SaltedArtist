@@ -1,4 +1,4 @@
-uuid: 36a84237-1dfe-44b9-a20d-e26074dd7828
+uuid: 5a5a039e-b139-446c-bfe8-056ec01f4b25
 langcode: en
 status: true
 dependencies: {  }
@@ -6,5 +6,5 @@ id: image_callout
 label: 'Image Callout'
 icon_uuid: null
 icon_default: null
-description: ''
+description: 'A basic callout including an image, title and description'
 behavior_plugins: {  }

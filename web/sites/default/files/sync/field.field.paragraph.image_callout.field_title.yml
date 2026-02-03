@@ -1,4 +1,4 @@
-uuid: baaa77e8-d63a-4f27-9252-a98e4c2b45d7
+uuid: 92d0cddf-3532-45f7-a231-c251692871ed
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ entity_type: paragraph
 bundle: image_callout
 label: Title
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
