@@ -1,0 +1,48 @@
+{#
+/**
+ * @file
+ * Template for image-callout paragraph type.
+ *
+ * Available variables:
+ * - paragraph: Paragraph entity with fields.
+ * - content: Rendered fields.
+ */
+#}
+
+{% set classes = [
+  'paragraph',
+  'paragraph--type--image-callout',
+  'paragraph--view-mode--' ~ view_mode|clean_class,
+] %}
+
+<div{{ attributes.addClass(classes) }}>
+  <div class="relative w-full overflow-hidden">
+
+    {# Image #}
+    {% if content.field_image %}
+      <div class="w-full max-h-[40rem]">
+        {{ content.field_image }}
+      </div>
+    {% endif %}
+
+    {# Text Overlay #}
+    {% if content.field_title or content.field_description %}
+      <div class="absolute inset-0 flex flex-col justify-center items-center p-6">
+
+        {% if content.field_title %}
+          <h2 class="text-8xl font-bold text-yellow mb-2">
+            {{ content.field_title }}
+          </h2>
+        {% endif %}
+
+        {% if content.field_description %}
+          <div class="text-2xl font-bold text-yellow">
+            {{ content.field_description }}
+          </div>
+        {% endif %}
+
+      </div>
+    {% endif %}
+
+  </div>
+</div>

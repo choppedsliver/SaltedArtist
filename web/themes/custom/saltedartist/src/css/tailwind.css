@@ -12,3 +12,7 @@
     @apply bg-none;
   }
 }
+
+.block-system-main-block {
+  @apply col-start-1 col-end-15;
+}

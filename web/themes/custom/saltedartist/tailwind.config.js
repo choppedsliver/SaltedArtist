@@ -15,6 +15,9 @@ module.exports = {
       fontFamily: {
         'georgia': ['Georgia', 'serif'],
       },
+      gridColumnEnd: {
+        '15': '15',
+      },
     },
   },
   plugins: [],
