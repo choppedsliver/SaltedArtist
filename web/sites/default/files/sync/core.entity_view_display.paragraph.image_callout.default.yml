@@ -3,16 +3,38 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.image_callout.field_description
+    - field.field.paragraph.image_callout.field_image
     - field.field.paragraph.image_callout.field_title
     - paragraphs.paragraphs_type.image_callout
+  module:
+    - image
 id: paragraph.image_callout.default
 targetEntityType: paragraph
 bundle: image_callout
 mode: default
 content:
+  field_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
   field_title:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }

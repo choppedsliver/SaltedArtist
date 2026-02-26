@@ -4,10 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_paragraphs
     - node.type.page
   module:
+    - entity_reference_revisions
     - layout_builder
-    - layout_discovery
     - user
 third_party_settings:
   layout_builder:
@@ -19,7 +20,16 @@ id: node.page.default
 targetEntityType: node
 bundle: page
 mode: default
-content: {  }
+content:
+  field_paragraphs:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
 hidden:
   body: true
   layout_builder__layout: true
