@@ -11,6 +11,8 @@
 
 {% set is_white = paragraph.field_white_text.value %}
 
+{% set full_height_image = paragraph.field_full_height_image.value %}
+
 {% set classes = [
   'paragraph',
   'paragraph--type--image-callout',
@@ -23,14 +25,14 @@
 
     {# Image #}
     {% if content.field_image %}
-      <div class="absolute w-full min-h-[40rem] h-[40rem] bg-black">
+      <div class="absolute w-full min-h-[40rem] h-[40rem] bg-black flex justify-center items-center">
         {{ content.field_image }}
       </div>
     {% endif %}
 
     {# Text Overlay #}
     {% if content.field_title or content.field_description or paragraph.field_link.value %}
-      <div class="relative inset-0 flex flex-col justify-center items-center py-12 px-6 w-3/4 m-auto">
+      <div class="relative inset-0 flex flex-col justify-center items-center py-12 px-6 w-3/4 m-auto {{ full_height_image ? 'pt-[30rem]' : 'pt-[1rem]' }}">
 
         {% if content.field_title %}
           <h2 class="text-8xl font-bold mb-2 text-center {{ is_white ? 'text-white' : 'text-yellow' }}">
