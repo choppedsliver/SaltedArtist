@@ -849,6 +849,26 @@ body {
 
 /* Your custom styles */
 
+/* body margins */
+
+.messages-list {
+  margin: 0px;
+}
+
+.block-system-main-block {
+  margin: 0px;
+}
+
+.node__content {
+  padding: 0px;
+}
+
+.region--content {
+  margin: 0px;
+}
+
+/* end body margins */
+
 .block-system-main-block {
   grid-column-start: 1;
   grid-column-end: 15;
