@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.image_callout.field_description
+    - field.field.paragraph.image_callout.field_full_height_image
     - field.field.paragraph.image_callout.field_image
     - field.field.paragraph.image_callout.field_link
     - field.field.paragraph.image_callout.field_title
@@ -56,4 +57,5 @@ content:
     weight: 0
     region: content
 hidden:
+  field_full_height_image: true
   field_white_text: true
