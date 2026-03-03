@@ -30,7 +30,7 @@
     {% endif %}
 
     {# Text #}
-    {% if content.field_title or content.field_description %}
+    {% if content.field_title or content.field_description or paragraph.field_link.value %}
       <div class="flex flex-col justify-center items-center p-6 w-1/2">
 
         {% if content.field_title %}
@@ -42,6 +42,14 @@
         {% if content.field_description %}
           <div class="text-xl text-yellow">
             {{ content.field_description }}
+          </div>
+        {% endif %}
+
+        {% if paragraph.field_link.value %}
+          <div class="button-yellow">
+            <a href="{{ paragraph.field_link.0.url }}">
+              {{ paragraph.field_link.0.title }}
+            </a>
           </div>
         {% endif %}
 

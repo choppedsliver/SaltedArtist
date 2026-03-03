@@ -37,7 +37,7 @@
 }
 
 .field--name-field-description {
-  @apply text-center leading-8;
+  @apply text-center leading-[3rem];
 }
 
 .button-yellow {
@@ -48,7 +48,7 @@
   }
 
   &:hover > a {
-    color: white;
+    color: black;
   }
 }
 
@@ -62,4 +62,9 @@
   &:hover > a {
     @apply text-yellow;
   }
+}
+
+/* navigation */
+.primary-nav__menu .primary-nav__menu-link {
+  @apply hover:underline;
 }

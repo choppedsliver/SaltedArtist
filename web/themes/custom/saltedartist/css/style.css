@@ -876,7 +876,7 @@ body {
 
 .field--name-field-description {
   text-align: center;
-  line-height: 2rem;
+  line-height: 3rem;
 }
 
 .button-yellow {
@@ -920,7 +920,7 @@ body {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
   &:hover > a {
-    color: white;
+    color: black;
   }
 }
 
@@ -968,6 +968,12 @@ body {
     --tw-text-opacity: 1;
     color: rgb(214 160 71 / var(--tw-text-opacity, 1));
   }
+}
+
+/* navigation */
+
+.primary-nav__menu .primary-nav__menu-link:hover {
+  text-decoration-line: underline;
 }
 
 .hover\:text-gray-700:hover {
