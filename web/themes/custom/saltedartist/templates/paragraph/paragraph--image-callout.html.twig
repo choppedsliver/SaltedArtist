@@ -9,10 +9,13 @@
  */
 #}
 
+{% set is_white = paragraph.field_white_text.value %}
+
 {% set classes = [
   'paragraph',
   'paragraph--type--image-callout',
   'paragraph--view-mode--' ~ view_mode|clean_class,
+  paragraph.field_white_text.value ? 'white-text' : '',
 ] %}
 
 <div{{ attributes.addClass(classes) }}>
@@ -20,24 +23,32 @@
 
     {# Image #}
     {% if content.field_image %}
-      <div class="w-full max-h-[40rem]">
+      <div class="absolute w-full min-h-[40rem] h-[40rem] bg-black">
         {{ content.field_image }}
       </div>
     {% endif %}
 
     {# Text Overlay #}
-    {% if content.field_title or content.field_description %}
-      <div class="absolute inset-0 flex flex-col justify-center items-center p-6">
+    {% if content.field_title or content.field_description or paragraph.field_link.value %}
+      <div class="relative inset-0 flex flex-col justify-center items-center py-12 px-6 w-3/4 m-auto">
 
         {% if content.field_title %}
-          <h2 class="text-8xl font-bold text-yellow mb-2">
+          <h2 class="text-8xl font-bold mb-2 text-center {{ is_white ? 'text-white' : 'text-yellow' }}">
             {{ content.field_title }}
           </h2>
         {% endif %}
 
         {% if content.field_description %}
-          <div class="text-2xl font-bold text-yellow">
+          <div class="text-2xl font-bold {{ is_white ? 'text-white' : 'text-yellow' }}">
             {{ content.field_description }}
+          </div>
+        {% endif %}
+
+        {% if paragraph.field_link.value %}
+          <div class="{{ is_white ? 'button-white' : 'button-yellow' }}">
+            <a href="{{ paragraph.field_link.0.url }}">
+              {{ paragraph.field_link.0.title }}
+            </a>
           </div>
         {% endif %}
 

@@ -5,11 +5,14 @@ dependencies:
   config:
     - field.field.paragraph.image_callout.field_description
     - field.field.paragraph.image_callout.field_image
+    - field.field.paragraph.image_callout.field_link
     - field.field.paragraph.image_callout.field_title
+    - field.field.paragraph.image_callout.field_white_text
     - image.style.thumbnail
     - paragraphs.paragraphs_type.image_callout
   module:
     - image
+    - link
 id: paragraph.image_callout.default
 targetEntityType: paragraph
 bundle: image_callout
@@ -31,6 +34,14 @@ content:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
+  field_link:
+    type: link_default
+    weight: 3
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
   field_title:
     type: string_textfield
     weight: 0
@@ -38,6 +49,13 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_white_text:
+    type: boolean_checkbox
+    weight: 3
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
 hidden:
   created: true

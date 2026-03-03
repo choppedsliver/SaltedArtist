@@ -5,10 +5,13 @@ dependencies:
   config:
     - field.field.paragraph.image_callout.field_description
     - field.field.paragraph.image_callout.field_image
+    - field.field.paragraph.image_callout.field_link
     - field.field.paragraph.image_callout.field_title
+    - field.field.paragraph.image_callout.field_white_text
     - paragraphs.paragraphs_type.image_callout
   module:
     - image
+    - link
 id: paragraph.image_callout.default
 targetEntityType: paragraph
 bundle: image_callout
@@ -32,6 +35,18 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
   field_title:
     type: string
     label: hidden
@@ -40,4 +55,5 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-hidden: {  }
+hidden:
+  field_white_text: true

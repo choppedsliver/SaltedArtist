@@ -1,0 +1,56 @@
+{#
+/**
+ * @file
+ * Template for media-with-text paragraph type.
+ *
+ * Available variables:
+ * - paragraph: Paragraph entity with fields.
+ * - content: Rendered fields.
+ */
+#}
+
+{% set classes = [
+  'paragraph',
+  'paragraph--type--media-with-text',
+  'paragraph--view-mode--' ~ view_mode|clean_class,
+] %}
+
+<div{{ attributes.addClass(classes) }}>
+{% if content.field_link.0.url %}
+  <a href="{{ content.field_link.0.url }}" class="relative w-full flex bg-black p-[6rem]">
+{% else %}
+  <div class="relative w-full flex bg-black p-[6rem]">
+{% endif %}
+
+    {# Image #}
+    {% if content.field_image %}
+      <div class="image w-1/2">
+        {{ content.field_image }}
+      </div>
+    {% endif %}
+
+    {# Text #}
+    {% if content.field_title or content.field_description %}
+      <div class="flex flex-col justify-center items-center p-6 w-1/2">
+
+        {% if content.field_title %}
+          <h2 class="text-4xl font-bold text-yellow mb-2">
+            {{ content.field_title }}
+          </h2>
+        {% endif %}
+
+        {% if content.field_description %}
+          <div class="text-xl text-yellow">
+            {{ content.field_description }}
+          </div>
+        {% endif %}
+
+      </div>
+    {% endif %}
+
+{% if content.field_link.0.url %}
+  </a>
+{% else %}
+  </div>
+{% endif %}
+</div>
