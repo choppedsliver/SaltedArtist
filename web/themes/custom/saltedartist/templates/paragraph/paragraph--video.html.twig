@@ -1,0 +1,32 @@
+{#
+/**
+ * @file
+ * Template for video paragraph type.
+ *
+ * Available variables:
+ * - paragraph: Paragraph entity with fields.
+ * - content: Rendered fields.
+ */
+#}
+
+{% set classes = [
+  'paragraph',
+  'paragraph--type--video',
+  'paragraph--view-mode--' ~ view_mode|clean_class,
+] %}
+
+<div{{ attributes.addClass(classes) }}>
+
+  {% if content.field_title %}
+    <h2 class="text-4xl font-bold text-center mb-6">
+      {{ content.field_title }}
+    </h2>
+  {% endif %}
+
+  {% if content.field_media %}
+    <div class="relative w-full aspect-video">
+      {{ content.field_media }}
+    </div>
+  {% endif %}
+
+</div>
