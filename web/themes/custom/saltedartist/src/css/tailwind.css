@@ -68,3 +68,7 @@
 .primary-nav__menu .primary-nav__menu-link {
   @apply hover:underline;
 }
+
+video {
+  @apply w-full h-auto;
+}
